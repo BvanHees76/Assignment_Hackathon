@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Review - The Sopranos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@600&family=Roboto:wght@100&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <img src="/images/sopranos_header.jpg" alt="original sopranos logo">
+        </header><!--End header-->
+
+        <nav>
+         
+        <div class="button"><a href="index.html" target="_blank">Home</a></div>                  
+        <div class="button"><a href="seasons.html" target="_blank">Seasons</a></div>
+        <div class="button"><a href="actors.html" target="_blank">Actors</a></div>
+        <div class="button"><a href="review.html" target="_blank">Review</a></div>
+        
+        </nav><!--End nav-->
+
+        <main>
+
+            <form name="Review" method="post" data-netlify="true">
+                <fieldset>
+                  <legend>Reviewer</legend>
+                    <div class="name">
+
+                      <label for="fullname">Name:</label><br>
+                      <input type="text" placeholder="Barbara van Hees" id="fullname" name="fname" required><br>
+                    </div><!--END name--> 
+                
+                <div class="mail">
+
+                    <label for="mail">E-mail:</label><br>
+                    <input type="email" placeholder="example@gmail.com" id="mail" name="email" required><br>
+
+                </div><!--END mail-->
+
+                <div class="gender">
+
+                    <p>Gender:</p>
+
+                    <input type="radio" name="gen" id="man">
+                    <label for="man">Male</label><br>
+
+                    <input type="radio" name="gen" id="woman">
+                    <label for="woman">Female</label><br>
+
+                    <input type="radio" name="gen" id="other">
+                    <label for="other">Other</label><br>
+                        
+                </div><!--End gender-->
+
+                <div class="birthday">
+                    <label for="bday">Birthday:</label>
+                    <input type="date" id="bday" name="birthday" required><br>
+                </div><!--END birthday-->                        
+               
+                </fieldset>
+
+                <fieldset>
+                    <legend>Review</legend>
+
+                    <div class="best_season">
+
+                        <p>Best season:</p>
+                        <input type="radio" name="season" id="season_one">
+                        <label for="season_one">Season 1</label><br>
+
+                        <input type="radio" name="season" id="season_two">
+                        <label for="season_two">Season 2</label><br>
+                        
+                        <input type="radio" name="season" id="season_three">
+                        <label for="season_one">Season 3</label><br>  
+                        
+                        <input type="radio" name="season" id="season_four">
+                        <label for="season_four">Season 4</label><br> 
+                        
+                        <input type="radio" name="season" id="season_five">
+                        <label for="season_five">Season 5</label><br>
+                        
+                        <input type="radio" name="season" id="season_six">
+                        <label for="season_six">Season 6</label>
+                        
+                        
+                    </div><!--END best_season-->
+
+               
+                    <label for="rev">Your review:</label><br>
+                    <textarea id="rev" name="rev" rows="5" cols="40" placeholder="Add a review of favourite season" required></textarea>
+
+                   
+
+                </fieldset>
+
+
+                
+                <div class="sub_reset">
+
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+
+
+                </div><!--END sub_reset-->
+
+                
+
+                </form>  
+
+
+           
+         
+        
+        
+        
+        
+        </main><!--End main-->
+
+
+
+
+
+        <footer>
+            <p>Author: Barbara van Hees</p>
+            <a href="mailto:barbaravhees@example.com">barbaravhees@example.com</a>
+        </footer><!--End footer-->
+
+
+    </div><!--End container-->
+    
+</body>
+</html>

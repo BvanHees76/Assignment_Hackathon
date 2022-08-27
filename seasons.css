@@ -1,0 +1,339 @@
+/*ALGEMEEN - HEADER AND NAV*/
+
+  *{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    border:0;
+   }
+   /*font-family: 'Cutive Mono', monospace; - form/menu/footer
+   font-family: 'Lora', serif; - for H1/H2
+   font-family: 'Roboto', sans-serif; - for p*/
+   
+   body{
+   background-color: rgb(74, 67, 67);
+   }
+   
+   .container{
+   height:100vh;
+   display: grid;
+   grid-template-columns: 2fr 3fr;
+   grid-template-rows: 90px 1fr repeat(3, 3fr) 1fr;
+   grid-column-gap: 0px;
+   grid-row-gap: 4px;
+   }
+      
+   header{
+   background-color: black;
+   color: white;
+   grid-area: 1 / 1 / 2 / 3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0.625em 0;
+   }
+   
+   header img{
+   width:14em;
+   }
+   
+   nav{
+   background-color: black;
+   grid-area: 2 / 1 / 3 / 3;
+   display:flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items:center;
+   padding-left:  0.625rem;/*10px*/
+   padding-right:  0.625rem;   
+   }
+
+   .button{/*<button> niet gebruikt - geeft foutmelding google-dev */
+    width:23%; 
+    height:56%;
+    background-color:#f2efe9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+      
+   nav a{
+   font-family: 'Cutive Mono', monospace;   
+   font-size: 1rem;
+   text-decoration:none;
+   }
+   
+   a:link{
+   color:black;
+   }
+   
+   a:visited {
+   color:#D7033d;
+   }
+   
+   a:hover {
+   color: rgb(231, 165, 34);
+   font-weight:bolder;
+   }
+
+   /*ALGEMEEN - END--HEADER AND NAV-----------------------------------------------------------------------*/
+   /*MAIN - SEASON SUMMARY--------------------------------------------------------------------------------*/
+   main{/*355*/
+   background-color: black;
+   color:white;
+   grid-area: 3 / 1 / 6 / 3;
+   border:0.625rem solid black;
+   overflow: auto;
+   }
+
+   .season_container{
+    background-color: rgb(46, 45, 45);
+    width:90.2%;/*320.51*/
+    margin: 0.625rem auto;
+    border:solid white 2px;
+    border-radius: 5%;
+    padding:1rem;
+    display:flex;
+    flex-flow: column wrap;
+   }
+
+   .top{
+    margin-bottom:1rem;
+    padding-right:0.3125rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;    
+   }
+
+   .title h1{
+   font-family: 'Lora', serif;
+   font-size: 1.125rem;
+   }
+
+   .title p{
+   font-family: 'Lora', serif;
+   font-size: 0.875rem;  
+   }
+
+   .par{
+    background-color: white;
+    color: black;
+    padding:0.625rem;
+    border-radius:5%;
+    font-family: 'Roboto', sans-serif;
+    font-size:0.875rem;
+   }
+
+   .button_epi{
+    background-color: white;
+    border:solid black 2px;
+    border-radius: 1rem;
+    padding:1rem;
+    margin-top: 0.625rem;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.5rem;
+    text-align: center; 
+    }
+
+    .button_epi a{
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.5rem;
+    text-decoration: none; 
+    }
+    #s4, #s6{
+    padding-right: 1.5rem;    
+    }
+
+   
+  
+   /*MAIN - END--SEASON SUMMARY-------------------------------------------------------------------------*/
+   /*ALGEMEEN - FOOTER----------------------------------------------------------------------------------*/  
+   footer{
+   font-size:0.75rem;/*12px*/
+   font-family: 'Cutive Mono', monospace;
+   background-color: black;
+   color:white;
+   grid-area: 6 / 1 / 7 / 3;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: flex-end;
+   padding-right: 0.625rem;
+   }
+   footer a{
+   font-family: 'Cutive Mono', monospace;
+   text-align: center;
+   text-decoration:none;
+   }
+   footer a:link{
+   color:white;
+   }
+          
+   footer a:hover {
+   color: rgb(231, 165, 34);
+   }
+
+    /*ALGEMEEN - END--FOOTER-----------------------------------------------------------------------------*/ 
+    
+    /*----------------------------------------MEDIA - 768-----------------------------------------------*/
+  
+@media screen and (min-width: 768px) {
+
+.season_container{
+width:95%;
+padding:2rem;
+}
+
+.top{
+flex-flow: row-reverse wrap;
+ }
+
+.button{
+height:70%;
+}
+
+.button a{
+font-family: 'Cutive Mono', monospace;   
+font-size: 1.25rem;}
+
+.size_one{
+width: 11.25rem;
+height: auto;
+border-radius: 5%;
+}
+
+.title{
+margin-top: 1rem;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+.title h1{
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+.title p{
+font-size: 1.5rem;  
+}
+
+.par{
+border-radius: 1rem;
+}
+
+.par p{
+font-size: 1rem;
+}
+  
+footer a{
+font-size: 1rem;
+}
+  
+  
+footer p{
+font-size:1rem;
+}
+  
+header img{
+width:35%;
+}
+}
+  
+  /*----------------------------------------MEDIA - 1024-----------------------------------------------*/
+  
+  @media screen and (min-width: 1024px) {
+
+.container{
+grid-template-rows: 15% 1fr repeat(3, 3fr) 1fr;
+}   
+
+  .button a{
+  font-family: 'Cutive Mono', monospace;   
+  font-size: 2rem;}
+
+  .title h1{
+  font-size: 2.5rem;
+  }
+    
+  .title p{
+  font-size: 1.75rem;  
+  }
+
+  .par p{
+  font-size: 1.25rem;
+  }
+
+  .button_epi a{
+  font-size: 2rem;
+  }
+
+      
+  footer a{
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.5rem;
+  }     
+      
+  footer p{
+  font-size:1.5rem;
+  font-family: 'Cutive Mono', monospace;
+  }
+      
+  header img{
+  width:35%;
+  }
+  }
+  
+  /*----------------------------------------MEDIA - 1280-----------------------------------------------*/
+  
+  @media screen and (min-width: 1280px) {
+
+  .season_container{
+  border-radius: 1rem;
+  }
+
+  header img{
+  width:30%;
+  }
+  }
+  
+
+   /*----------------------------------------MEDIA - 1440-----------------------------------------------*/
+   @media screen and (min-width: 1440px) {
+.season_container{
+width:80%;
+}
+
+.size_one{
+  width: 15.625rem;
+  height: auto;
+  border-radius: 5%;
+  }
+
+.title h1{
+font-size: 4rem;
+}
+        
+.title p{
+font-size: 1.75rem;  
+}
+
+.par p{
+font-size: 1.875rem;
+}
+
+.button{
+height:4rem;
+}
+
+.button_epi a{
+font-size: 2.25rem;
+}
+
+header img{
+  width:25%;
+}
+}
+

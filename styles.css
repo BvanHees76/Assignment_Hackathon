@@ -1,0 +1,335 @@
+/*ALGEMEEN - HEADER AND NAV*/
+*{
+ box-sizing: border-box;
+ margin:0;
+ padding:0;
+ border:0;
+}
+/*font-family: 'Cutive Mono', monospace; - form
+font-family: 'Lora', serif; - for H1/H2
+font-family: 'Roboto', sans-serif; - for p*/
+
+body{
+background-color: rgb(74, 67, 67);
+}
+
+.container{
+height:100vh;
+display: grid;
+grid-template-columns: 2fr 3fr;
+grid-template-rows: 90px 1fr repeat(3, 3fr) 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 4px;
+}
+
+header{
+width:100%;
+background-color: black;
+color: white;
+grid-area: 1 / 1 / 2 / 3;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0.625em 0;
+}
+
+header img{
+width:60%;
+}
+
+nav{
+background-color: black;
+grid-area: 2 / 1 / 3 / 3;
+display:flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items:center;
+padding-left:  0.625rem;/*10px*/
+padding-right:  0.625rem;
+}
+
+.button{/*<button> niet gebruikt - geeft foutmelding google-dev */
+width:23%;
+height:56%;
+background-color:#f2efe9;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.button a{
+font-family: 'Cutive Mono', monospace;   
+font-size: 0.875rem;
+Text-decoration:none;
+}
+
+a:link{
+color:black;
+}
+
+a:visited {
+color:#D7033d;
+}
+
+a:hover {
+color: rgb(231, 165, 34);
+font-weight:bolder;
+}
+/*ALGEMEEN - HEADER AND NAV*/
+/*MAIN - HOMEPAGE*/
+main{
+background-color: #f2efe9;;
+grid-area: 3 / 1 / 6 / 3;
+border:0.625rem solid black;
+overflow: auto;
+display:grid;
+grid-template-columns: 1fr 100px 1fr 10fr 1fr;
+grid-template-rows: 1fr 100px repeat(2, 1fr) 100px repeat(2, 1fr) 100px 1fr;
+grid-template-areas: 
+" . . . . . "
+" . imga . txta . "
+" . . . txta . "
+" . . . . . "
+" . imgb . txtb . "
+" . . . txtb . "
+" . . . . . "
+" . imgc . txtc . "
+" . . . . . "
+;
+}
+
+p{
+font-family: 'Roboto', sans-serif;
+font-size: 0.75rem;
+}
+.one_img_main{
+grid-area: imga;
+}
+
+.one_p_main{
+grid-area: txta;
+overflow: auto;
+}
+
+.two_img_main{
+grid-area: imgb;
+}
+.two_p_main{
+grid-area: txtb;
+overflow: auto;
+}
+.three_img_main{
+grid-area: imgc;
+}
+
+.three_p_main{
+grid-area: txtc;
+overflow: auto;
+}
+/*MAIN - END--HOMEPAGE*/
+/*ALGEMEEN - FOOTER*/
+
+footer{
+font-family: 'Cutive Mono', monospace;
+font-size: 0.875rem;
+background-color: black;
+color:white;
+grid-area: 6 / 1 / 7 / 3;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: flex-end;
+padding-right: 0.625rem;
+}
+
+footer a{
+text-align: center;
+text-decoration:none;
+}
+
+
+footer a:link{
+color:white;
+}
+       
+footer a:hover {
+color: rgb(231, 165, 34);
+}
+
+/*ALGEMEEN - END--FOOTER*/
+
+/*----------------------------------------MEDIA - 768-----------------------------------------------*/
+  
+@media screen and (min-width: 768px) {
+
+header img{
+width:35%;
+}
+
+main{
+display:grid;
+grid-template-columns: 1fr 125px 1fr 10fr 1fr;
+grid-template-rows: 1fr 125px repeat(2, 1fr) 125px repeat(2, 1fr) 125px 1fr;
+row-gap: 0.3125rem;
+}
+
+.size_one{
+width: 7.8125rem;
+height: 7.8125rem;
+}
+
+main p{
+font-family: 'Roboto', sans-serif;
+font-size: 0.875rem;
+}
+
+.button{
+height:1.75rem;
+}
+
+.button a{
+font-family: 'Cutive Mono', monospace;   
+font-size: 1.125rem;}
+
+footer a{
+font-family: 'Cutive Mono', monospace;
+font-size: 1rem;
+}
+
+
+footer p{
+font-size:1rem;
+font-family: 'Cutive Mono', monospace;
+}
+
+
+}
+
+/*----------------------------------------MEDIA - 1024-----------------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+.container{
+    grid-template-rows: 15% 1fr repeat(3, 3fr) 1fr;
+} 
+
+main{
+display:grid;
+grid-template-columns: 1fr 180px 1fr 10fr 1fr;
+grid-template-rows: 1fr 180px repeat(2, 1fr) 180px repeat(2, 1fr) 180px 1fr;
+row-gap: 0.3125rem;
+grid-template-areas: 
+" imga imga imga txta . "
+" imga imga imga txta . "
+" imga imga imga txta . "
+" imgb imgb imgb txtb . "
+" imgb imgb imgb txtb . "
+" imgb imgb imgb txtb . "
+" imgc imgc imgc txtc . "
+" imgc imgc imgc txtc . "
+" imgc imgc imgc txtc . "
+;
+}
+.one_img_main{
+grid-area: imga;
+display: flex;
+justify-content: center;
+ align-items: center;
+        }
+
+.two_img_main{
+grid-area: imgb;
+display: flex;
+justify-content: center;
+align-items: center;        
+}
+
+.three_img_main{
+grid-area: imgc;
+display: flex;
+justify-content: center;
+align-items: center;  
+}        
+
+.one_p_main{
+grid-area: txta;
+overflow: auto;
+display: flex;
+justify-content: center;
+align-items: flex-start
+}
+            
+.two_p_main{
+grid-area: txtb;
+overflow: auto;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+}
+            
+.three_p_main{
+grid-area: txtc;
+overflow: auto;
+display: flex;
+justify-content: center;
+align-items: flex-start      
+}
+
+.size_one{
+width: 11.25rem;
+height: auto;
+}
+    
+main p{
+font-family: 'Roboto', sans-serif;
+font-size: 1.25rem;
+}
+
+.button{
+height:80%;
+}
+    
+.button a{
+font-family: 'Cutive Mono', monospace;   
+font-size: 2rem;}
+    
+footer a{
+font-family: 'Cutive Mono', monospace;
+font-size: 1.5rem;
+}    
+    
+footer p{
+font-size:1.5rem;
+font-family: 'Cutive Mono', monospace;
+}
+    
+header img{
+width:30%;
+}
+}
+
+/*----------------------------------------MEDIA - 1280-----------------------------------------------*/
+
+  @media screen and (min-width: 1280px) {
+
+.button{/*<button> niet gebruikt - geeft foutmelding google-dev */
+height:80%;
+}
+
+main p{
+font-family: 'Roboto', sans-serif;
+font-size: 1.5rem;
+}
+     
+header img{
+width:25%;
+}
+}
+        
+
+        
+
+
+
+
+
